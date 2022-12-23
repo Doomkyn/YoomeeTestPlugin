@@ -16,14 +16,21 @@ public class YoomeeTestPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("coolMethod")) {
             String message = args.getString(0);
-            this.coolMethod(message, callbackContext);
+            this.showNativeToast(message, callbackContext);
             return true;
         }
         return false;
     }
 
-    private void coolMethod(String message, CallbackContext callbackContext) {
+    private void showNativeToast(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
+            Context context = getApplicationContext();
+            CharSequence text = "Hello toast!";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+
             callbackContext.success(message);
         } else {
             callbackContext.error("Expected one non-empty string argument.");
