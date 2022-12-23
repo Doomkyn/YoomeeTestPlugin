@@ -24,7 +24,7 @@ public class YoomeeTestPlugin extends CordovaPlugin {
 
     private void showNativeToast(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Test Plugin!", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(this.cordova.getActivity().getApplicationContext(), "Test Plugin!", Toast.LENGTH_SHORT);
             toast.show();
 
             callbackContext.success(message);
