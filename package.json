@@ -1,7 +1,6 @@
 {
   "name": "it.yoomee.testplugin",
-  "version": "0.0.1-1",
-  "description": "",
+  "version": "0.0.2-2",
   "cordova": {
     "id": "it.yoomee.testplugin",
     "platforms": [
@@ -13,5 +12,14 @@
     "cordova-android"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doomkyn/YoomeeTestPlugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Doomkyn/YoomeeTestPlugin/issues"
+  },
+  "homepage": "https://github.com/Doomkyn/YoomeeTestPlugin#readme",
+  "description": ""
 }
